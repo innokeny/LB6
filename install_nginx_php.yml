@@ -1,0 +1,25 @@
+---
+- name: Install Nginx and PHP
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Install PHP
+      apt:
+        name: php-fpm php-mysql
+        state: present
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
+
