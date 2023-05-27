@@ -1,0 +1,1 @@
+kali2 ansible_host=192.168.64.4 ansible_user=rra ansible_ssh_private_key_file=/home/rar7/.ssh/id_rsa
